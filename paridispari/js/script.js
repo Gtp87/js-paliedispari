@@ -5,8 +5,17 @@
 // Dichiariamo chi ha vinto (corrispondenza tra scelta pari e dispari e somma pari o dispari)
 // In un secondo momento creiamo delle funzioni per i numeri random e per il check pari dispari
 
+// chiedo di scegliere e verifico che abbia scelto tra opzioni previste
 let userChoice = prompt('scrivi pari o dispari');
+while (userChoice != 'pari' && userChoice != 'dispari'){
+   userChoice = prompt('scrivi pari o dispari');
+}
+
+// chiedo di inserire un numero da 1 a 5 e verifico
 let numberUser = parseInt(prompt('scegli un numero da 1 a 5'));
+while (numberUser < 1 || numberUser  > 5 || isNaN(numberUser)) {
+  numberUser =  parseInt(prompt('scegli un numero da 1 a 5'));
+}
 
 // creiamo un numero random per il pc e lo sommiamo al numero scelto dall'utente
 
